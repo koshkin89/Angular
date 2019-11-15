@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { SuccessComponent } from './success/success.component';
 import { WarningComponent } from './warning/warning.component';
 
+import { SuccessModule } from './success/success.module';
+import { WarningModule } from './warning/warning.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +15,9 @@ import { WarningComponent } from './warning/warning.component';
     WarningComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SuccessModule,
+    WarningModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-warning',
-  template: '<p>warning message</p>',
+  template: '<p>{{title}}</p>',
   styles:  [`p{
     width: calc(100% - 60px);
     margin: 30px 30px 0 30px;
@@ -17,6 +17,7 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class WarningComponent implements OnInit {
+  title:string = 'warning message second';
 
   constructor() { }
 
