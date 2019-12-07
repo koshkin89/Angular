@@ -1,2 +1,12 @@
-<app-success></app-success>
-<app-warning></app-warning>
+<app-title [title] = stringTitle 
+[ngClass]= "{
+    'green': styleTitle,
+    'red': !styleTitle
+}"
+></app-title>
+<h3 *ngIf = '!hideMessage'>{{counTer}}</h3>
+<app-subtitle *ngIf = 'hideMessage'></app-subtitle>
+<button (click)='start()'>Start Timer</button>
+<button (click)='pause()'>Pause</button>
+<app-message [message] = stringMessage *ngIf = 'hideMessage' >
+</app-message>

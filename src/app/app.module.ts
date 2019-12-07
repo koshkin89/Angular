@@ -2,18 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-
-import { SuccessModule } from './success/success.module';
-import { WarningModule } from './warning/warning.module';
+import { TitleComponent } from './title/title.component';
+import { MessageComponent } from './message/message.component';
+import { SubtitleComponent } from './subtitle/subtitle.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TitleComponent,
+    MessageComponent,
+    SubtitleComponent
   ],
   imports: [
-    BrowserModule,
-    SuccessModule,
-    WarningModule
+    BrowserModule
+    ],
+  exports: [
+    TitleComponent,
+    MessageComponent,
+    SubtitleComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
